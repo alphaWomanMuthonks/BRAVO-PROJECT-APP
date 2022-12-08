@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+10.times do
+  Project.create(
+    name: Faker::App.name,
+    description: Faker::Hipster.sentence,
+    user_id: users.sample.id
+  )
+end
+
+50.times do
+  Review.create(
+    name: Faker::App.name,
+    description: Faker::Hipster.sentence,
+    project_id: projects.sample.id
+  )
+end
