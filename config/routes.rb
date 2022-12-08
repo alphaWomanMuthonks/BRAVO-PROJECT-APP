@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  # resources :reviews
-  # resources :users
-  # resources :projects
+  resources :reviews
+  resources :users
+  resources :projects
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   post 'signup', to: 'users#create'
   get 'me', to: 'users#show'
+
   
 end

@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+    # GET /Usets
+    def index
+        user = User.all
+        render json: user , status: :ok
+    end
+
     # POST /signup
     def create
         user = User.create(user_params)
